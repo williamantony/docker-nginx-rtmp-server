@@ -1,0 +1,26 @@
+version: "3"
+services:
+  nginx-rtmp:
+    container_name: nginx-container
+    image: nginx-rtmp-image
+    build:
+      context: .
+    ports:
+      - 1935:1935
+    networks:
+      custom-docker-network:
+    depends_on:
+      - stunnel
+
+  stunnel:
+    container_name: stunnel-container
+    image: stunnel-image
+    build: 
+      context: ./stunnel
+    ports:
+      - 19350:19350
+    networks:
+      custom-docker-network:
+
+networks:
+  custom-docker-network:
