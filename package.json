@@ -1,0 +1,23 @@
+{
+  "name": "@williampathadan/church-livestream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docker:reset": "docker rmi nginx-rtmp-image stunnel-image",
+    "docker": "docker-compose up",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamantony/docker-nginx-rtmp-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williamantony/docker-nginx-rtmp-server/issues"
+  },
+  "homepage": "https://github.com/williamantony/docker-nginx-rtmp-server#readme"
+}
